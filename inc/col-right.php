@@ -5,44 +5,52 @@
         
         <div class="inside">
 
-            <a href="#"><img class="main-image" src="<?php echo $plugin_url . '/images/no-image.png' ?>" width="300px" height="300px"></a>
+        <?php 
+            $thumbnailUrl = $gravapress_profile->{'entry'}[0]->{'thumbnailUrl'};
+            $gallery_photos = $gravapress_profile->{'entry'}[0]->{'photos'};
+            $urls_sites = $gravapress_profile->{'entry'}[0]->{'urls'};
+        ?>
 
+        
+
+            <!-- PROFILE IMAGE -->
+
+            <a href="<?php echo ($thumbnailUrl ? $thumbnailUrl : $plugin_url . '/images/no-image.png' ) . '?s=300'; ?>" target="_blank">
+                <img class="main-image" src="<?php echo ($thumbnailUrl ? $thumbnailUrl : $plugin_url . '/images/no-image.png' ) . '?s=300'; ?>" 
+                alt="Gravatar User image Profile">
+            </a>
+
+            <!-- GALLERY -->
             <h1><?php esc_attr_e( 'Photo Gallery', 'wp_admin_style' ); ?></h1>
-            <div class="gallery-image">
-                <p>
-                    <a href="#" target="_blank">
-                        <img src="<?php echo $plugin_url . '/images/no-image.png' ?>" width="50px" height="50px">
-                    </a>
+            <div class="gallery-image">            
 
-                    <a href="#" target="_blank">
-                        <img src="<?php echo $plugin_url . '/images/no-image.png' ?>" width="50px" height="50px">
+                <?php
+                    $total_photos = sizeof( $gallery_photos );
+                    for ($i=0; $i < $total_photos ; $i++) : 
+                ?>                
+                    <a href="<?php echo $gallery_photos[$i]->{'value'}; ?>" target="_blank">
+                        <img class="gallery_gravatar_image" src="<?php echo $gallery_photos[$i]->{'value'}; ?>" 
+                        alt="Gravatar User image Profile">
                     </a>
+                <?php endfor; ?>
 
-                    <a href="#" target="_blank">
-                        <img src="<?php echo $plugin_url . '/images/no-image.png' ?>" width="50px" height="50px">
-                    </a>
-
-                    <a href="#" target="_blank">
-                        <img src="<?php echo $plugin_url . '/images/no-image.png' ?>" width="50px" height="50px">
-                    </a>
-
-                    <a href="#" target="_blank">
-                        <img src="<?php echo $plugin_url . '/images/no-image.png' ?>" width="50px" height="50px">
-                    </a>
-                </p>
             </div>            
 
+            <!-- SITES -->
             <h1><?php esc_attr_e( 'Websites', 'wp_admin_style' ); ?></h1>
             <div class="sites-image">
-                <a href="#" target="_blank">
-                    <img src="<?php echo $plugin_url . '/images/no-image.png' ?>" width="100px" height="100px"> 
-                    <div class="caption">View Site</div>
-                </a>
 
-                <a href="#" target="_blank">
-                    <img src="<?php echo $plugin_url . '/images/no-image.png' ?>" width="100px" height="100px"> 
-                    <div class="caption">View Site</div>
-                </a>
+                <?php
+                    $total_url = sizeof( $urls_sites );
+                    for ($i=0; $i < $total_url ; $i++) : 
+                ?>                
+                    <a href="<?php echo $urls_sites[$i]->{'urls'}; ?>" target="_blank">
+                        <img src="<?php echo ( $urls_sites[$i]->{'urls'} ? $urls_sites[$i]->{'urls'} : $plugin_url . '/images/link.png') ; ?>" 
+                        width="100" height="100">
+                        <div class="caption"><?php echo $urls_sites[$i]->{'title'}; ?></div>
+                    </a>
+                <?php endfor; ?>
+
             </div>           
             
         </div>

@@ -76,6 +76,8 @@
 									</div>
 									<!-- /col-left -->
 
+									<p style="clear:both;"></p>
+
 								</div>
 								<!-- /col-container -->
 
@@ -86,6 +88,31 @@
 
 					</div>
 					<!-- .postbox -->
+
+
+					<!-- postbox JSON -->
+
+					<?php if ($display_json == true): ?>
+
+					<div class="postbox">
+
+						<h2 class="hndle">
+							<span><?php esc_attr_e( 'JSON Gravatar Profile', 'WpAdminStyle' ); ?></span>
+						</h2>						
+
+						<div class="inside">
+                            <pre>
+								<code>
+									<?php var_dump($gravapress_profile);?>
+								</code>
+							</pre>
+						</div>
+						<?php endif; ?>
+						<!-- .inside -->
+
+					</div>
+					<!-- postbox JSON -->
+
 					<?php endif;?>
 
 				</div>
@@ -111,11 +138,12 @@
 
 						<div class="inside">
 							<form name="email_form" method="post" action="">
-								<table class="form-table">                                
+								<table class="form-table">
+								<input type="hidden" name="email_submitted" value="Y">                         
 									<tr>
 										<td>
 											<label for="gravatar_email"> E-mail
-												<input type="email" name="gravatar_email" id="gravatar_email" value="<?php echo $gravapress_email;?>" placeholder="Gravatar e-mail" />
+												<input type="text" name="gravatar_email" id="gravatar_email" value="<?php echo $gravapress_email;?>" placeholder="Gravatar e-mail" />
 											</label>
 										</td>
 									</tr>
