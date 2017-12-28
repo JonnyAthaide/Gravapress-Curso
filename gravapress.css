@@ -130,31 +130,6 @@ h1, h2, h3, h4, h5, h6 {
  }
 
  /*
- *	Frontend Widget Styles
- *
-*/
-.about-me {
-	width: 100%; 
-	overflow: hidden;
-}
-
-.about-me img{
-	float: left;
-	margin-bottom: 10px;	
-}
-
-.about-me span{
-	margin-right: 30px; 
-	float:right;
-}
-
-#about-title{		
-	margin-bottom: 0px; 
-}
-
-
-
-/*
  *	Frontend Shortcode Styles
  *
 */
