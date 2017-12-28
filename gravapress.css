@@ -45,3 +45,167 @@
     text-decoration:none;
     color:black;
  }
+
+ /*
+ *	Frontend Widget Styles
+ *
+*/
+h1, h2, h3, h4, h5, h6 {	
+	padding: initial !important;
+}
+	
+.about-me {
+	width: 100%; 
+	overflow: hidden;
+}
+
+.about-me img{
+	float: left;
+	margin-bottom: 10px;
+}
+
+.about-me span{
+	padding: 0 5px;
+	float:right;
+}
+
+.about-me span p{
+	text-align: right;
+}
+
+#about-title{		
+	margin-bottom: 0px; 
+}
+
+
+
+/*
+ *	Configuration Page Styles
+ *
+*/
+.email-box {
+	margin-left: 15px;	
+}
+
+.email-box .button-primary {
+	margin-top: 10px;
+}
+
+/* Layout */
+#col-right {
+	width: 400px ;
+	margin-left: auto ;
+	margin-right: auto ;
+}
+
+/* Images */
+.main-image {
+	max-width: 100%;	
+	border: 5px solid #F1F1F1;
+	margin-bottom: 20px;
+}
+
+.gallery-image img{
+	max-width: 15%;
+	margin-right: 10px;
+	margin-top:15px; 
+	border: 5px solid #F1F1F1;		
+	padding:0 3px;    
+}
+
+.sites-image img{    
+    margin-top:15px;   
+    float: left;  
+}
+
+.caption {
+	text-align: center;
+}
+
+.sites-image a{
+    margin:0px 20px;
+    display:inline-block;
+    text-decoration:none;
+    color:black;
+ }
+
+ /*
+ *	Frontend Widget Styles
+ *
+*/
+.about-me {
+	width: 100%; 
+	overflow: hidden;
+}
+
+.about-me img{
+	float: left;
+	margin-bottom: 10px;	
+}
+
+.about-me span{
+	margin-right: 30px; 
+	float:right;
+}
+
+#about-title{		
+	margin-bottom: 0px; 
+}
+
+
+
+/*
+ *	Frontend Shortcode Styles
+ *
+*/
+
+.gallery-st table, .sites-st table, .social-st table, .contact-st table{
+	max-width: 160px;
+}
+
+.gallery-st table tr, .sites-st table tr, .social-st table tr, .contact-st table tr{
+	border-bottom: none !important;
+}
+
+.about-st h3 {
+	padding-top: 25px;
+}
+
+.about-st table {
+	border: none;	
+}
+
+.about-st td {
+	border: none;
+}
+
+.about-st small{
+	font-weight:normal;
+	font-size: 14px;
+}
+
+.gallery-st img{			
+	border: 5px solid #F1F1F1;	
+}
+
+.sites-st{    
+    margin-top:15px;   
+    float: left;  
+    width: 100%;
+}
+
+.sites-st a{
+	color: #555;
+ }
+
+ .sites-st table {
+    text-align: center;
+}
+
+ .social-st{
+ 	width: 250px;
+ }
+
+ .contact-st p{
+ 	line-height: 5px;
+ }
