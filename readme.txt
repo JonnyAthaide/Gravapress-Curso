@@ -1,6 +1,6 @@
 ﻿=== Gravapress ===
-Contributors: Marco Floriano
-Donate link: http://marcofloriano.com.br/
+Contributors: Jonnhatan de Sales Athaide
+Donate link: https://jsacode.com.br/jonnhatan-de-sales-athaide/
 Tags: gravatar, user, profile
 Requires at least: 3.0.1
 Tested up to: 3.4
